@@ -8,9 +8,11 @@ A service capable of sending notifications. It exposes a REST interface for inte
 
 ### Learning and Docs
 
+You can proceed on learning the materials from this repository assuming that you know already [02-java-file-service](https://github.com/becoming/02-java-file-service)
+
 Please refer to the [Wiki section](https://github.com/becoming/notification-service/wiki) of this repository for a complete guide on how to build this application step by step and learn the required technologies along the way.
 
-[the Becoming's YouTube Playlist](https://www.youtube.com/playlist?list=PLPkoWZmDIKwB7NJH22gqfgHFV7YK0lJ1j)
+[YouTube Playlist](https://www.youtube.com/playlist?list=PLPkoWZmDIKwB7NJH22gqfgHFV7YK0lJ1j)
 
 ### Setup
 
@@ -27,10 +29,26 @@ As well, please install [this software list](https://github.com/becoming/0-java-
 mvn clean package
 ```
 
+#### Install MongoDB
+
+Via Docker
+```bash
+docker run --name article-service-db -P mongo
+
+# or control the exposed port via run command
+
+docker run --name article-service-db -p 27017:27017 mongo
+```
+Or as an application, [by following official docs.](https://docs.mongodb.com/manual/installation/#mongodb-community-edition-installation-tutorials)
+
 #### Run
 
+Find the MongoDB's port
+ - default is **27017**
+ - *if run via docker* with **-P** the something like: **32768**
+     - `docker ps` will give you the number
 ```bash
-mvn spring-boot:run
+mvn spring-boot:run -Dspring.data.mongodb.port: 32768
 ```
 
 ### Download a build
