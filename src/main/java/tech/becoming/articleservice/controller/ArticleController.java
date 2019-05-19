@@ -1,27 +1,21 @@
 package tech.becoming.articleservice.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import tech.becoming.articleservice.entity.Article;
 import tech.becoming.articleservice.service.ArticleService;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("article")
+@RequiredArgsConstructor
 public class ArticleController {
 
     private final ArticleService articleService;
 
-    public ArticleController(ArticleService articleService) {
-        this.articleService = articleService;
-    }
-
-    @PostMapping(
-            consumes = MediaType.APPLICATION_JSON_VALUE,
-            produces = MediaType.TEXT_PLAIN_VALUE)
+    @PostMapping(produces = MediaType.TEXT_PLAIN_VALUE)
     public String createFile(@RequestBody Article article) {
 
         return articleService.save(article).getId();
@@ -37,7 +31,7 @@ public class ArticleController {
         return articleService.setData(id, body).getId();
     }
 
-    @GetMapping(value = "{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "{id}")
     public Article getFile(@PathVariable String id) {
         return articleService.findById(id);
     }

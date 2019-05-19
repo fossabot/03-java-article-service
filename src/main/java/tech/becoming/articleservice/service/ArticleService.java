@@ -1,5 +1,6 @@
 package tech.becoming.articleservice.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import tech.becoming.articleservice.entity.Article;
 import tech.becoming.articleservice.exception.BadRequestException;
@@ -11,11 +12,10 @@ import java.util.List;
 import java.util.Map;
 
 @Service
+@RequiredArgsConstructor
 public class ArticleService {
 
     private final ArticleRepository articleRepository;
-
-    public ArticleService(ArticleRepository articleRepository) {this.articleRepository = articleRepository;}
 
     public Article setData(String id, String body) {
         final Article article = articleRepository
