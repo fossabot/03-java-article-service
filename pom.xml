@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>tech.becoming</groupId>
 	<artifactId>article-service</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>article-service</name>
 	<description>Demo project for Spring Boot</description>
 
