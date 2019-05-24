@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/becoming/03-java-article-service.svg?branch=master)](https://travis-ci.org/becoming/03-java-article-service)
 [![Maintainability](https://api.codeclimate.com/v1/badges/db96a60ede90da061419/maintainability)](https://codeclimate.com/github/becoming/03-java-article-service/maintainability)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbecoming%2F03-java-article-service.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbecoming%2F03-java-article-service?ref=badge_shield)
 [ ![Download](https://api.bintray.com/packages/becoming/m2/article-service/images/download.svg) ](https://bintray.com/becoming/m2/article-service/_latestVersion) 
 [![Gitter](https://badges.gitter.im/becoming-tech/community.svg)](https://gitter.im/becoming-tech/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
@@ -67,3 +68,6 @@ In order to test if you learned well the things so far try to do the following a
     - via dedicated route: /categories/
 1. Article authors
     - via dedicated route: /authors/
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbecoming%2F03-java-article-service.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbecoming%2F03-java-article-service?ref=badge_large)
